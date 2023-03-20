@@ -1,0 +1,369 @@
+
+    /* Common styles */
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    nav ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+    }
+    nav ul li a {
+      display: block;
+      color: #fff;
+      text-align: center;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+    nav ul li a:hover {
+      background-color: #ddd;
+      color: #333;
+    }
+    main {
+      padding: 20px;
+    }
+    
+    /* Welcome page styles */
+    #welcome {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      background-color: #f2f2f2;
+    }
+    #welcome h1 {
+      font-size: 4rem;
+      margin-bottom: 20px;
+    }
+    #welcome form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    #welcome label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    #welcome input[type="text"] {
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 1.2rem;
+    }
+    #welcome input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    /* Search page styles */
+    #search-form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+    #search-form label {
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+    #search-form input[type="text"] {
+      margin-bottom: 20px;
+      padding: 10px;
+      font-size: 1.2rem;
+    }
+    #search-results {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .user-card {
+      width: 250px;
+      margin: 10px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .user-card img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      object-fit: cover;
+      margin-bottom: 10px;
+    }
+    .user-card h2 {
+      font-size: 1.6rem;
+      margin-bottom: 5px;
+    }
+    .user-card p {
+      margin-bottom: 10px;
+    }
+     /* Chat page styles */
+    #chat {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    #chat-header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #chat-header h2 {
+      font-size: 2rem;
+      margin: 0;
+    }
+    #chat-header button {
+      background-color: #fff;
+      color: #333;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #chat-messages {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 20px;
+    }
+    .message {
+      margin-bottom: 10px;
+    }
+    .message p {
+      padding: 10px;
+      background-color: #eee;
+      border-radius: 5px;
+      display: inline-block;
+      max-width: 70%;
+      word-break: break-all;
+    }
+    .message.sent p {
+      background-color: #333;
+      color: #fff;
+    }
+    #chat-form {
+      display: flex;
+      align-items: center;
+      padding: 20px;
+    }
+    #chat-form input[type="text"] {
+      flex-grow: 1;
+      padding: 10px;
+      font-size: 1.2rem;
+      margin-right: 10px;
+    }
+    #chat-form input[type="submit"] {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+      background-color: #333;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    /* Notification page styles */
+    #notifications {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    #notifications-header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #notifications-header h2 {
+      font-size: 2rem;
+      margin: 0;
+    }
+    #notifications-header button {
+      background-color: #fff;
+      color: #333;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    #notifications-list {
+      flex-grow: 1;
+      overflow-y: auto;
+      padding: 20px;
+    }
+    .notification {
+      margin-bottom: 10px;
+      padding: 10px;
+      background-color: #eee;
+      border-radius: 5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .notification h3 {
+      font-size: 1.2rem;
+      margin: 0;
+    }
+    .notification button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    
+    /* Settings page styles */
+    #settings {
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+    }
+    #settings-header {
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    #settings-header h2 {font-size: 2rem;
+        margin: 0;
+      }
+      #settings-header button {
+        background-color: #fff;
+        color: #333;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #settings-form {
+        flex-grow: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #settings-form input[type="text"],
+      #settings-form input[type="password"] {
+        padding: 10px;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 500px;
+      }
+      #settings-form input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      /* Update profile page styles */
+      #update-profile {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+      }
+      #update-profile-header {
+        background-color: #333;
+        color: #fff;
+        padding: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #update-profile-header h2 {
+        font-size: 2rem;
+        margin: 0;
+      }
+      #update-profile-header button {
+        background-color: #fff;
+        color: #333;
+        border: none;
+        padding: 10px;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #update-profile-form {
+        flex-grow: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      #update-profile-form input[type="text"],
+      #update-profile-form input[type="password"] {
+        padding: 10px;
+        font-size: 1.2rem;
+        margin-bottom: 10px;
+        width: 100%;
+        max-width: 500px;
+      }
+      #update-profile-form input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      /* Log out page styles */
+      #logout {
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        justify-content: center;
+        align-items: center;
+      }
+      #logout h2 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+      }
+      #logout button {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        background-color: #333;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      
+      /* Utility classes */
+      .hide {
+        display: none;
+      }
+      .active {
+        font-weight: bold;
+      }

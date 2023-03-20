@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Sign Up</title>
+	<meta name="description" content="#">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap core CSS -->
+	<link href="/css/lib/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<!-- Swipe core CSS -->
+	<link href="/css/swipe.min.css" type="text/css" rel="stylesheet">
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/images/mbr-121x137.png" type="image/x-icon">
+</head>
+
+<body class="start">
+	<main>
+		<div class="layout">
+			<!-- Start of Sign Up -->
+			<div class="main order-md-2">
+				<div class="start">
+					<div class="container">
+						<div class="col-md-12">
+							<div class="content">
+								<h1>Create Account</h1>
+
+								<p>Use your email for registration:</p>
+								<form class="signup" action="/signup" method="POST" enctype="multipart/form-data">
+									<div class="form-parent">
+										
+										<% if (messages.error) { %>
+											<div class="alert-danger">
+												<strong>
+													<%= messages.error %>
+												</strong>
+											</div>
+											<% } %>
+
+												<hr>
+												<div class="form-group">
+													<input type="text" name="name" id="inputName" class="form-control"
+														placeholder="Full Name" required>
+													<button class="btn icon"><i
+															class="material-icons">person_outline</i></button>
+												</div>
+												<div class="form-group">
+													<input type="email" name="email" id="inputEmail"
+														class="form-control" placeholder="Email Address" required>
+													<button class="btn icon"><i
+															class="material-icons">mail_outline</i></button>
+												</div>
+									</div>
+									<div style="display: flex; justify-content: space-between; align-items: center;">
+										<div style="margin-right: 10px; width: 220px">
+											<label for="dob">Date of Birth:</label>
+											<input type="date" class="form-control" id="dob" name="dob" required />
+										</div>
+
+
+										<div class="form-group" ; style="width: 230px; text-align: justify;">
+											<label for="usertype">Type of User:</label>
+											<select id="usertype" class="form-control" name="usertype" required>
+												<option value="">Select an option</option>
+												<option value="student">Student</option>
+												<option value="professional">Professional</option>
+											</select>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="career">Career Interest:</label>
+										<select id="career" class="form-control" name="career" required>
+											<option value="">Select an option</option>
+											<option value="webdev">Web Development</option>
+											<option value="graphics">Graphics Designing</option>
+											<option value="mobiledev">Mobile App Development</option>
+											<option value="datasci">Data Science</option>
+											<option value="cybersec">Cybersecurity</option>
+										</select>
+									</div>
+									<div class="form-group">
+										<label class="label">
+										<input type="file" name="image" class="form-control"
+											placeholder="Profile Picture" required>
+											<span>Upload Profile Picture</span>
+										</label>
+									</div>
+
+									<div class="form-group">
+										<input type="password" name="password" id="inputPassword" class="form-control"
+											placeholder="Password" minlength="8" required>
+										<button class="btn icon"><i class="material-icons">lock_outline</i></button>
+									</div>
+									<div class="form-group">
+										<input type="password" id="inputPassword" class="form-control"
+											placeholder="Repeat Password" minlength="8" required>
+										<button class="btn icon"><i class="material-icons">lock_outline</i></button>
+									</div>
+									<button type="submit" class="btn button">Sign Up</button>
+									<div class="callout">
+										<span>Already a member? <a href="/signin">Sign In</a></span>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End of Sign Up -->
+			<!-- Start of Sidebar -->
+			<div class="aside order-md-1">
+				<div class="container">
+					<div class="col-md-12">
+						<div class="preference">
+							<h2>Welcome Back!</h2>
+							<p>To keep connected with your friends please login with your personal info.</p>
+							<a href="/signin" class="btn button">Sign In</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End of Sidebar -->
+		</div> <!-- Layout -->
+	</main>
+	<!-- Bootstrap core JavaScript
+		================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="/js/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script>window.jQuery || document.write('<script src="/js/vendor/jquery-slim.min.js"><\/script>')</script>
+	<script src="/js/vendor/popper.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+</body>
+
+
+</html>

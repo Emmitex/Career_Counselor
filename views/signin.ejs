@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<title>Sign In</title>
+	<meta name="description" content="#">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!-- Bootstrap core CSS -->
+	<link href="/css/lib/bootstrap.min.css" type="text/css" rel="stylesheet">
+	<!-- Swipe core CSS -->
+	<link href="/css/swipe.min.css" type="text/css" rel="stylesheet">
+	<!-- Favicon -->
+	<link rel="shortcut icon" href="/images/mbr-121x137.png" type="image/x-icon">
+</head>
+
+<body class="start">
+	<main>
+		<div class="layout">
+			<!-- Start of Sign In -->
+			<div class="main order-md-1">
+				<div class="start">
+					<div class="container">
+						<div class="col-md-12">
+							<div class="content">
+
+								<h1>Sign In</h1>
+
+								<form action="/signin" method="POST">
+
+									<% if (messages.error) { %>
+										<div class="alert-danger">
+											<strong>
+												<%= messages.error %>
+											</strong>
+										</div>
+										<% } %>
+
+											<hr>
+											<div class="form-group">
+												<input type="email" name="email" id="inputEmail" class="form-control"
+													placeholder="Email Address">
+												<button class="btn icon"><i
+														class="material-icons">mail_outline</i></button>
+											</div>
+											<div class="form-group">
+												<input type="password" name="password" id="inputPassword"
+													class="form-control" placeholder="Password">
+												<button class="btn icon"><i
+														class="material-icons">lock_outline</i></button>
+											</div>
+											
+											<button type="submit" class="btn button" formaction="">Sign In</button>
+											<div class="callout">
+												<span>Don't have account? <a href="/signup">Create Account</a></span>
+											</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End of Sign In -->
+			<!-- Start of Sidebar -->
+			<div class="aside order-md-2">
+				<div class="container">
+					<div class="col-md-12">
+						<div class="preference">
+							<h2>Hello, Friend!</h2>
+							<p>Enter your personal details and start your journey with Career Counsellor today.</p>
+							<a href="/signup" class="btn button">Sign Up</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- End of Sidebar -->
+		</div> <!-- Layout -->
+	</main>
+	<!-- Bootstrap core JavaScript
+		================================================== -->
+	<!-- Placed at the end of the document so the pages load faster -->
+	<script src="/js/jquery-3.3.1.slim.min.js"
+		integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+		crossorigin="anonymous"></script>
+	<script>window.jQuery || document.write('<script src="/js/vendor/jquery-slim.min.js"><\/script>')</script>
+	<script src="/js/vendor/popper.min.js"></script>
+	<script src="/js/bootstrap.min.js"></script>
+
+	<div id="data"></div>
+
+	<script>
+		fetch('/api/data')
+			.then(response => response.json())
+			.then(data => {
+				const dataElement = document.getElementById('data');
+				dataElement.innerHTML = data.message;
+			})
+			.catch(error => console.error(error));
+	</script>
+</body>
+
+</html>

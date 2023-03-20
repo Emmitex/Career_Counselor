@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>User Search Results</title>
+</head>
+<body>
+  <h1>User Search Results</h1>
+  <% if (user) { %>
+    <p>name: <%= user.name %></p>
+    <p>Email: <%= user.email %></p>
+  <% } else { %>
+    <p>No user found.</p>
+  <% } %>
+</body>
+</html>
